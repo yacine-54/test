@@ -1,0 +1,18 @@
+all:
+  vars:
+    pipelining : True
+    ansible_become: True
+    ansible_user: ansible
+    # ansible_password: ubuntu
+    # ansible_sudo_pass: ubuntu
+    ansible_port: 22
+    ansible_ssh_private_key_file: /home/ubuntu/nodes.key
+    # ansible_ssh_common_args: -o StrictHostKeyChecking=no -o ControlMaster=auto -o ControlPersist=30m -o ConnectionAttempts=100 -o UserKnownHostsFile=/dev/null
+    ansible_python_interpreter: /usr/bin/python3
+  hosts:
+    node1:
+      ansible_host: 10.20.206.67
+    node2:
+      ansible_host: 10.20.206.68
+    node3:
+      ansible_host: 10.20.206.72
